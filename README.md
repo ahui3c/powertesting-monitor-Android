@@ -24,6 +24,28 @@
 
 電力監控是一款專業的Android應用程式，專為精確的電池消耗監測和分析而設計。它提供即時電池使用追蹤、浮動視窗介面、全面的測試管理和詳細的消耗報告。
 
+### 💡 開發動機與背景
+
+身為一位資深的科技評測專家，我在日常工作中經常需要測試各種手機的電池表現。過去要測試影片播放、相機錄影、視訊通話等不同情境下的電力消耗時，總是需要：
+
+- ⏰ **設定鬧鐘提醒** - 手動計時測試時間
+- 📝 **人工記錄數據** - 不斷查看並記錄電量變化
+- 😴 **無法休息** - 整個測試過程都要守在手機旁邊
+- 📊 **數據不精確** - 人工記錄容易出現誤差
+
+這樣的測試方式不僅**累人**，更重要的是**不夠專業**和**精確**。
+
+『電力監控』就是為了解決這些痛點而誕生的專業工具：
+
+🎯 **一鍵開始測試** - 設定30分鐘或任意時長，點擊開始就能自動監控  
+🪟 **浮動視窗監控** - 小巧的浮動視窗始終顯示在螢幕前方，不干擾測試  
+📱 **完全自動化** - 開啟影片播放、相機錄影或任何應用程式後，讓手機自己跑測試  
+☕ **解放雙手** - 測試期間可以去休息、工作或做其他事情  
+📊 **精確數據** - 自動記錄指定時間內的精確電力消耗百分比  
+📚 **歷史記錄** - 完整保存所有測試結果，方便比較和分析  
+
+**簡單來說，這個APP讓電池測試從「累人的手工活」變成「輕鬆的自動化流程」。**
+
 ### ✨ 主要功能
 
 #### 🔋 **專業電池監控**
@@ -128,6 +150,28 @@
 ### 📱 About PowerTesting Monitor
 
 PowerTesting Monitor is a professional Android application designed for accurate battery consumption monitoring and analysis. It provides real-time battery usage tracking with a floating window interface, comprehensive test management, and detailed consumption reports.
+
+### 💡 Development Background & Motivation
+
+As a senior technology reviewer and evaluator, I frequently need to test battery performance across various smartphones in my daily work. Previously, when testing power consumption in different scenarios like video playback, camera recording, or video calls, I always had to:
+
+- ⏰ **Set manual alarms** - Manually time the testing duration
+- 📝 **Record data by hand** - Constantly check and manually log battery changes
+- 😴 **Stay alert throughout** - Monitor the phone throughout the entire testing process
+- 📊 **Deal with inaccurate data** - Human recording prone to errors and inconsistencies
+
+This testing approach was not only **exhausting** but more importantly **unprofessional** and **imprecise**.
+
+PowerTesting Monitor was born to solve these pain points as a professional tool:
+
+🎯 **One-tap testing** - Set 30 minutes or any duration, tap start for automatic monitoring  
+🪟 **Floating window monitoring** - Compact floating window always visible on screen without interfering with tests  
+📱 **Complete automation** - Start video playback, camera recording, or any app, then let the phone run tests itself  
+☕ **Hands-free operation** - Go rest, work, or do other things during testing  
+📊 **Precise data** - Automatically record exact battery consumption percentage within specified time  
+📚 **Historical records** - Complete preservation of all test results for comparison and analysis  
+
+**Simply put, this app transforms battery testing from "exhausting manual work" into "effortless automated workflow".**
 
 ### ✨ Key Features
 
