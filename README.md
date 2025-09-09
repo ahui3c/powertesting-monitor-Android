@@ -1,125 +1,20 @@
-# PowerTesting Monitor Android | 電力監控 Android
+# 電力監控 Android | PowerTesting Monitor Android
 
 <div align="center">
 
 ![App Icon](app/src/main/res/mipmap-xxxhdpi/ic_launcher.png)
 
-**Professional Battery Consumption Monitoring Tool for Android**  
-**專業的Android電池消耗監控工具**
+**專業的Android電池消耗監控工具**  
+**Professional Battery Consumption Monitoring Tool for Android**
 
 [![Version](https://img.shields.io/badge/version-0.1-blue.svg)](https://github.com/ahui3c/powertesting-monitor-Android/releases)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
 [![Android](https://img.shields.io/badge/platform-Android%206.0%2B-brightgreen.svg)](https://android.com)
 [![Language](https://img.shields.io/badge/language-Java-orange.svg)](https://www.java.com)
 
-[English](#english) | [繁體中文](#繁體中文)
+[繁體中文](#繁體中文) | [English](#english)
 
 </div>
-
----
-
-## English
-
-### 📱 About PowerTesting Monitor
-
-PowerTesting Monitor is a professional Android application designed for accurate battery consumption monitoring and analysis. It provides real-time battery usage tracking with a floating window interface, comprehensive test management, and detailed consumption reports.
-
-### ✨ Key Features
-
-#### 🔋 **Professional Battery Monitoring**
-- **Real-time Tracking**: Accurate battery level monitoring with precise consumption calculation
-- **Floating Window**: 140x140dp floating window for continuous monitoring without interruption
-- **Smart Analytics**: Detailed consumption rate analysis and reporting
-
-#### 🎯 **Intelligent Test Management**
-- **Flexible Duration**: Customizable test duration from 1 to 120 minutes
-- **Quick Selection**: One-tap 30-minute and 60-minute preset buttons
-- **Auto Settings**: Automatic test configuration and battery optimization guidance
-
-#### 🎵 **Multi-sensory Feedback**
-- **Audio Alerts**: Confirmation sounds for test start and completion
-- **Vibration Feedback**: Tactile feedback for better user experience
-- **Smart Adaptation**: Automatic adaptation to different Android versions
-
-#### 🌍 **Multi-language Support**
-- **Traditional Chinese**: Complete interface for Taiwan, Hong Kong, Macau users
-- **English**: Full English interface for international users
-- **Simplified Chinese**: Complete interface for Mainland China users
-- **Auto Detection**: Automatic language switching based on system settings
-
-#### 📊 **Comprehensive Data Management**
-- **Test History**: Complete record of all battery tests with detailed information
-- **Data Export**: Export test results for further analysis
-- **One-click Copy**: Copy individual test results to clipboard
-- **Data Cleanup**: Easy data management and cleanup options
-
-#### ⚙️ **Deep System Integration**
-- **Permission Management**: Smart permission checking and guidance
-- **Battery Optimization**: Direct access to system battery optimization settings
-- **Device Compatibility**: Perfect compatibility with various Android devices and screen sizes
-
-### 🚀 Getting Started
-
-#### System Requirements
-- **Android Version**: 6.0+ (API 23)
-- **RAM**: 100MB+ available memory
-- **Storage**: 50MB+ available storage
-- **Permissions**: Overlay permission for floating window
-
-#### Installation
-1. Download the latest APK from [Releases](https://github.com/ahui3c/powertesting-monitor-Android/releases)
-2. Enable "Install from unknown sources" in Android settings
-3. Install the APK file
-4. Grant necessary permissions when prompted
-
-#### Quick Start
-1. **Launch the app** and grant overlay permission
-2. **Configure test duration** using slider or quick buttons (30min/60min)
-3. **Start floating window** from the main interface
-4. **Begin monitoring** by tapping "Start" in the floating window
-5. **View results** in the test history section
-
-### 🛠️ Technical Details
-
-#### Architecture
-- **Language**: Java
-- **Minimum SDK**: 23 (Android 6.0)
-- **Target SDK**: 35 (Android 15)
-- **Build System**: Gradle with Android Gradle Plugin
-
-#### Key Components
-- **FloatingWindowService**: Core floating window management
-- **BatteryMonitor**: Real-time battery monitoring engine
-- **TestManager**: Test lifecycle and data management
-- **FeedbackManager**: Audio and vibration feedback system
-- **PreferenceManager**: Settings and data persistence
-
-### 🤝 Contributing
-
-We welcome contributions! Please feel free to submit issues, feature requests, or pull requests.
-
-#### Development Setup
-1. Clone the repository
-2. Open in Android Studio
-3. Sync Gradle dependencies
-4. Build and run on device/emulator
-
-### 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-### 👨‍💻 Developer
-
-**廖阿輝 (Liao A-Hui)**
-- **Email**: chehui@gmail.com
-- **Website**: https://ahui3c.com
-- **Expertise**: Android Development, Battery Management, System Optimization
-
-### 📞 Support
-
-- **GitHub Issues**: [Report bugs or request features](https://github.com/ahui3c/powertesting-monitor-Android/issues)
-- **Email Support**: chehui@gmail.com
-- **Website**: https://ahui3c.com
 
 ---
 
@@ -228,10 +123,115 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ---
 
+## English
+
+### 📱 About PowerTesting Monitor
+
+PowerTesting Monitor is a professional Android application designed for accurate battery consumption monitoring and analysis. It provides real-time battery usage tracking with a floating window interface, comprehensive test management, and detailed consumption reports.
+
+### ✨ Key Features
+
+#### 🔋 **Professional Battery Monitoring**
+- **Real-time Tracking**: Accurate battery level monitoring with precise consumption calculation
+- **Floating Window**: 140x140dp floating window for continuous monitoring without interruption
+- **Smart Analytics**: Detailed consumption rate analysis and reporting
+
+#### 🎯 **Intelligent Test Management**
+- **Flexible Duration**: Customizable test duration from 1 to 120 minutes
+- **Quick Selection**: One-tap 30-minute and 60-minute preset buttons
+- **Auto Settings**: Automatic test configuration and battery optimization guidance
+
+#### 🎵 **Multi-sensory Feedback**
+- **Audio Alerts**: Confirmation sounds for test start and completion
+- **Vibration Feedback**: Tactile feedback for better user experience
+- **Smart Adaptation**: Automatic adaptation to different Android versions
+
+#### 🌍 **Multi-language Support**
+- **Traditional Chinese**: Complete interface for Taiwan, Hong Kong, Macau users
+- **English**: Full English interface for international users
+- **Simplified Chinese**: Complete interface for Mainland China users
+- **Auto Detection**: Automatic language switching based on system settings
+
+#### 📊 **Comprehensive Data Management**
+- **Test History**: Complete record of all battery tests with detailed information
+- **Data Export**: Export test results for further analysis
+- **One-click Copy**: Copy individual test results to clipboard
+- **Data Cleanup**: Easy data management and cleanup options
+
+#### ⚙️ **Deep System Integration**
+- **Permission Management**: Smart permission checking and guidance
+- **Battery Optimization**: Direct access to system battery optimization settings
+- **Device Compatibility**: Perfect compatibility with various Android devices and screen sizes
+
+### 🚀 Getting Started
+
+#### System Requirements
+- **Android Version**: 6.0+ (API 23)
+- **RAM**: 100MB+ available memory
+- **Storage**: 50MB+ available storage
+- **Permissions**: Overlay permission for floating window
+
+#### Installation
+1. Download the latest APK from [Releases](https://github.com/ahui3c/powertesting-monitor-Android/releases)
+2. Enable "Install from unknown sources" in Android settings
+3. Install the APK file
+4. Grant necessary permissions when prompted
+
+#### Quick Start
+1. **Launch the app** and grant overlay permission
+2. **Configure test duration** using slider or quick buttons (30min/60min)
+3. **Start floating window** from the main interface
+4. **Begin monitoring** by tapping "Start" in the floating window
+5. **View results** in the test history section
+
+### 🛠️ Technical Details
+
+#### Architecture
+- **Language**: Java
+- **Minimum SDK**: 23 (Android 6.0)
+- **Target SDK**: 35 (Android 15)
+- **Build System**: Gradle with Android Gradle Plugin
+
+#### Key Components
+- **FloatingWindowService**: Core floating window management
+- **BatteryMonitor**: Real-time battery monitoring engine
+- **TestManager**: Test lifecycle and data management
+- **FeedbackManager**: Audio and vibration feedback system
+- **PreferenceManager**: Settings and data persistence
+
+### 🤝 Contributing
+
+We welcome contributions! Please feel free to submit issues, feature requests, or pull requests.
+
+#### Development Setup
+1. Clone the repository
+2. Open in Android Studio
+3. Sync Gradle dependencies
+4. Build and run on device/emulator
+
+### 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+### 👨‍💻 Developer
+
+**廖阿輝 (Liao A-Hui)**
+- **Email**: chehui@gmail.com
+- **Website**: https://ahui3c.com
+- **Expertise**: Android Development, Battery Management, System Optimization
+
+### 📞 Support
+
+- **GitHub Issues**: [Report bugs or request features](https://github.com/ahui3c/powertesting-monitor-Android/issues)
+- **Email Support**: chehui@gmail.com
+- **Website**: https://ahui3c.com
+
+---
+
 <div align="center">
 
-**PowerTesting Monitor v0.1 - Professional Battery Monitoring Made Simple**  
-**電力監控 v0.1 - 讓專業電池監控變得簡單**
+**電力監控 v0.1 - 讓專業電池監控變得簡單**  
+**PowerTesting Monitor v0.1 - Professional Battery Monitoring Made Simple**
 
 *Made with ❤️ by 廖阿輝 (Liao A-Hui)*
 
