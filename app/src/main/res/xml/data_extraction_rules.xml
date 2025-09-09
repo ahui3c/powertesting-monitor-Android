@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<data-extraction-rules>
+    <cloud-backup>
+        <!-- 允許備份應用設定 -->
+        <include domain="sharedpref" path="." />
+        <!-- 排除設備特定數據 -->
+        <exclude domain="sharedpref" path="device_prefs.xml" />
+    </cloud-backup>
+    <device-transfer>
+        <!-- 設備轉移時包含用戶數據 -->
+        <include domain="sharedpref" path="." />
+    </device-transfer>
+</data-extraction-rules>
+

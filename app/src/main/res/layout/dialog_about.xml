@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:maxHeight="500dp">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:minWidth="320dp"
+    android:background="@drawable/dialog_background">
+
+    <!-- 標題 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="關於電力監控"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 應用程式圖示 -->
+    <ImageView
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:src="@mipmap/ic_launcher"
+        android:layout_gravity="center"
+        android:layout_marginBottom="12dp" />
+
+    <!-- 版本資訊 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="版本資訊"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/tv_version_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="版本：v0.1"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tv_version_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="版本代碼：1"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="發布日期：2025年9月9日"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary" />
+
+    </LinearLayout>
+
+    <!-- 開發者資訊 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="開發者資訊"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="作者：廖阿輝"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tv_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="信箱：chehui@gmail.com"
+            android:textSize="14sp"
+            android:textColor="@color/primary_color"
+            android:textIsSelectable="true"
+            android:autoLink="email"
+            android:layout_marginBottom="4dp" />
+
+        <TextView
+            android:id="@+id/tv_website"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="網站：https://ahui3c.com"
+            android:textSize="14sp"
+            android:textColor="@color/primary_color"
+            android:textIsSelectable="true"
+            android:autoLink="web"
+            android:layout_marginBottom="4dp" />
+
+    </LinearLayout>
+
+    <!-- 應用程式描述 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="應用程式介紹"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="電力監控是一款專業的電池消耗測試工具，提供精確的電池使用量監測和分析功能。"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:lineSpacingExtra="2dp"
+            android:layout_marginBottom="6dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="主要功能："
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_secondary"
+            android:layout_marginBottom="3dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="• 浮動視窗即時監控\n• 自定義測試時長\n• 詳細測試報告\n• 歷史記錄管理\n• 音效震動反饋"
+            android:textSize="13sp"
+            android:textColor="@color/text_secondary"
+            android:lineSpacingExtra="1dp" />
+
+    </LinearLayout>
+
+    <!-- 按鈕區域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="end">
+
+        <Button
+            android:id="@+id/btn_contact_email"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="聯絡作者"
+            android:textSize="12sp"
+            android:textColor="@color/button_text_secondary"
+            android:background="@drawable/floating_button_secondary_background"
+            android:paddingHorizontal="12dp"
+            android:layout_marginEnd="6dp" />
+
+        <Button
+            android:id="@+id/btn_visit_website"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="訪問網站"
+            android:textSize="12sp"
+            android:textColor="@color/button_text_secondary"
+            android:background="@drawable/floating_button_secondary_background"
+            android:paddingHorizontal="12dp"
+            android:layout_marginEnd="6dp" />
+
+        <Button
+            android:id="@+id/btn_close_dialog"
+            android:layout_width="wrap_content"
+            android:layout_height="36dp"
+            android:text="關閉"
+            android:textSize="12sp"
+            android:textColor="@color/button_text_primary"
+            android:background="@drawable/floating_button_primary"
+            android:paddingHorizontal="12dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
+
+</ScrollView>

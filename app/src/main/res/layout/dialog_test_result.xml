@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/dialog_background">
+
+    <!-- 標題 -->
+    <TextView
+        android:id="@+id/tv_dialog_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="📊 測試完成"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/primary_text"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 設備信息 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="📱 設備:"
+            android:textSize="14sp"
+            android:textColor="@color/secondary_text" />
+        
+        <TextView
+            android:id="@+id/tv_device_info"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Samsung Galaxy S24"
+            android:textSize="14sp"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 時間範圍 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🕐 時間:"
+            android:textSize="14sp"
+            android:textColor="@color/secondary_text" />
+        
+        <TextView
+            android:id="@+id/tv_time_range"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="15:36 - 15:41"
+            android:textSize="14sp"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 持續時間 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="⏱️ 持續:"
+            android:textSize="14sp"
+            android:textColor="@color/secondary_text" />
+        
+        <TextView
+            android:id="@+id/tv_duration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="5分鐘"
+            android:textSize="14sp"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 電量變化 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🔋 電量:"
+            android:textSize="14sp"
+            android:textColor="@color/secondary_text" />
+        
+        <TextView
+            android:id="@+id/tv_battery_change"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="80% → 75%"
+            android:textSize="14sp"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 消耗量 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="📉 消耗:"
+            android:textSize="14sp"
+            android:textColor="@color/secondary_text" />
+        
+        <TextView
+            android:id="@+id/tv_consumption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="5%"
+            android:textSize="14sp"
+            android:textColor="@color/consumption_high"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 消耗率 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp">
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="📊 消耗率:"
+            android:textSize="14sp"
+            android:textColor="@color/secondary_text" />
+        
+        <TextView
+            android:id="@+id/tv_consumption_rate"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="60.0%/小時"
+            android:textSize="14sp"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!-- 分隔線 -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_color"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp" />
+
+    <!-- 按鈕區域 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <!-- 複製按鈕 -->
+        <Button
+            android:id="@+id/btn_copy_result"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:text="📋 複製結果"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:background="@drawable/floating_button_primary"
+            android:elevation="2dp" />
+
+        <!-- 關閉按鈕 -->
+        <Button
+            android:id="@+id/btn_close_dialog"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:text="關閉"
+            android:textSize="14sp"
+            android:textColor="@color/primary_text"
+            android:background="@drawable/floating_button_secondary"
+            android:elevation="2dp" />
+
+    </LinearLayout>
+
+</LinearLayout>
+

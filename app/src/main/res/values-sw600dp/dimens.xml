@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 大螢幕設備（平板、摺疊屏展開狀態）的尺寸配置 -->
+    
+    <!-- 浮動窗口尺寸 -->
+    <dimen name="floating_window_width">200dp</dimen>
+    <dimen name="floating_window_height">120dp</dimen>
+    
+    <!-- 文字大小 -->
+    <dimen name="floating_text_size">16sp</dimen>
+    <dimen name="floating_title_size">18sp</dimen>
+    
+    <!-- 間距 -->
+    <dimen name="floating_margin">12dp</dimen>
+    <dimen name="floating_padding">16dp</dimen>
+    
+    <!-- 按鈕尺寸 -->
+    <dimen name="floating_button_size">48dp</dimen>
+    <dimen name="floating_button_margin">8dp</dimen>
+    
+</resources>
+

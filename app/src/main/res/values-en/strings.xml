@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Battery Monitor</string>
+    
+    <!-- Main Interface -->
+    <string name="main_title">Battery Monitor</string>
+    <string name="start_monitoring">Start Monitoring</string>
+    <string name="stop_monitoring">Stop Monitoring</string>
+    <string name="settings">Settings</string>
+    <string name="history">History</string>
+    
+    <!-- Floating Window -->
+    <string name="floating_window_title">Battery Monitor</string>
+    <string name="status_idle">Idle</string>
+    <string name="status_running">Testing</string>
+    <string name="status_completed">Completed</string>
+    
+    <!-- Settings -->
+    <string name="settings_title">Settings</string>
+    <string name="test_duration">Test Duration</string>
+    <string name="test_duration_summary">Set the duration for each test</string>
+    <string name="floating_window_settings">Floating Window Settings</string>
+    <string name="enable_floating_window">Enable Floating Window</string>
+    <string name="window_transparency">Window Transparency</string>
+    
+    <!-- History -->
+    <string name="history_title">Test History</string>
+    <string name="no_history">No test records</string>
+    <string name="test_result_format">%1$s - %2$s\nDuration: %3$s\nBattery Consumption: %4$d%%</string>
+    
+    <!-- Permissions -->
+    <string name="permission_overlay_title">Floating Window Permission</string>
+    <string name="permission_overlay_message">Floating window permission is required to display monitoring status</string>
+    <string name="permission_battery_title">Battery Optimization</string>
+    <string name="permission_battery_message">To ensure monitoring accuracy, it is recommended to disable battery optimization</string>
+    <string name="grant_permission">Grant Permission</string>
+    <string name="cancel">Cancel</string>
+    
+    <!-- Time Format -->
+    <string name="duration_format">%1$dm %2$ds</string>
+    <string name="time_format">%1$02d:%2$02d</string>
+    
+    <!-- Notifications -->
+    <string name="notification_channel_name">Battery Monitor</string>
+    <string name="notification_channel_desc">Battery monitoring service notifications</string>
+    <string name="notification_title">Battery Monitoring</string>
+    <string name="notification_content">Tap to view details</string>
+    
+    <!-- Main Activity UI -->
+    <string name="app_description">Battery Monitor is a professional battery consumption testing tool that provides accurate battery usage monitoring and analysis.</string>
+    <string name="permission_status">Permission Status</string>
+    <string name="floating_window_permission">Floating Window Permission</string>
+    <string name="permission_granted">Granted</string>
+    <string name="permission_not_granted">Not Granted</string>
+    <string name="request_permission">Request Permission</string>
+    <string name="floating_monitoring">Floating Monitor</string>
+    <string name="floating_monitoring_desc">Launch floating window for real-time battery monitoring</string>
+    <string name="launch_floating_window">Launch Floating Window</string>
+    <string name="test_settings">Test Settings</string>
+    <string name="test_settings_desc">Configure test duration and parameters</string>
+    <string name="test_duration_minutes">Test Duration (Minutes)</string>
+    <string name="minutes_30">30 Min</string>
+    <string name="minutes_60">60 Min</string>
+    <string name="system_settings">System Settings</string>
+    <string name="system_settings_desc">Configure system-related settings for optimal performance</string>
+    <string name="battery_optimization">Battery Optimization</string>
+    <string name="battery_optimization_desc">To ensure monitoring accuracy, please disable battery optimization</string>
+    <string name="open_battery_settings">Open Battery Settings</string>
+    <string name="data_management">Data Management</string>
+    <string name="data_management_desc">Export or clear test data</string>
+    <string name="export_data">Export Data</string>
+    <string name="clear_data">Clear Data</string>
+    <string name="test_records">Test Records</string>
+    <string name="test_records_desc">View past battery test history</string>
+    <string name="view_history">View History</string>
+    <string name="about_app">About App</string>
+    <string name="about_app_desc">View app information and developer contact</string>
+    <string name="view_details">View Details</string>
+    
+    <!-- About Dialog -->
+    <string name="about_title">About</string>
+    <string name="version_info">Version Info</string>
+    <string name="version_label">Version:</string>
+    <string name="version_code_label">Version Code:</string>
+    <string name="developer_info">Developer Info</string>
+    <string name="author_label">Author:</string>
+    <string name="author_name">Liao A-Hui</string>
+    <string name="email_label">Email:</string>
+    <string name="website_label">Website:</string>
+    <string name="app_intro">App Introduction</string>
+    <string name="app_description_full">Battery Monitor is a professional battery consumption testing tool that provides accurate battery usage monitoring and analysis.</string>
+    <string name="main_features">Main Features:</string>
+    <string name="feature_list">• Real-time floating window monitoring\n• Custom test duration\n• Detailed test reports\n• History record management\n• Audio and vibration feedback</string>
+    <string name="contact_author">Contact Author</string>
+    <string name="visit_website">Visit Website</string>
+    <string name="close">Close</string>
+    
+    <!-- Toast Messages -->
+    <string name="email_copied">Author email copied to clipboard: %s</string>
+    <string name="website_copied">Website URL copied to clipboard: %s</string>
+    <string name="no_email_app">No email app available, please contact manually: %s</string>
+    <string name="no_browser_app">No browser available, please visit manually: %s</string>
+    <string name="data_exported">Test data exported successfully</string>
+    <string name="data_cleared">Test data cleared successfully</string>
+    <string name="export_failed">Failed to export data</string>
+    <string name="clear_failed">Failed to clear data</string>
+    
+    <!-- Test Results -->
+    <string name="test_date">Test Date</string>
+    <string name="test_time">Test Time</string>
+    <string name="battery_change">Battery Change</string>
+    <string name="consumption_rate">Consumption Rate</string>
+    <string name="copy_result">Copy</string>
+    <string name="result_copied">Test result copied to clipboard</string>
+    
+    <!-- Statistics -->
+    <string name="statistics_summary">Statistics Summary</string>
+    <string name="total_tests">Total Tests</string>
+    <string name="average_consumption">Average Consumption</string>
+    <string name="average_rate">Average Rate</string>
+</resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 標準螢幕設備的尺寸配置 -->
+    
+    <!-- 浮動窗口尺寸 -->
+    <dimen name="floating_window_width">160dp</dimen>
+    <dimen name="floating_window_height">100dp</dimen>
+    
+    <!-- 精簡版浮動窗口尺寸 -->
+    <dimen name="floating_window_compact_width">120dp</dimen>
+    <dimen name="floating_window_compact_height">72dp</dimen>
+    
+    <!-- 文字大小 -->
+    <dimen name="floating_text_size">14sp</dimen>
+    <dimen name="floating_title_size">16sp</dimen>
+    <dimen name="floating_text_small">12sp</dimen>
+    <dimen name="floating_text_tiny">10sp</dimen>
+    
+    <!-- 間距 -->
+    <dimen name="floating_margin">8dp</dimen>
+    <dimen name="floating_padding">12dp</dimen>
+    <dimen name="floating_compact_padding">6dp</dimen>
+    
+    <!-- 按鈕尺寸 -->
+    <dimen name="floating_button_size">40dp</dimen>
+    <dimen name="floating_button_margin">6dp</dimen>
+    <dimen name="floating_button_small">20dp</dimen>
+    <dimen name="floating_button_compact_height">24dp</dimen>
+    
+    <!-- 圖標尺寸 -->
+    <dimen name="floating_icon_small">16dp</dimen>
+    <dimen name="floating_indicator_small">8dp</dimen>
+    
+    <!-- 通用間距 -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="card_margin">8dp</dimen>
+    <dimen name="card_padding">16dp</dimen>
+    
+</resources>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- 運行狀態 -->
+    <item android:state_selected="true">
+        <shape android:shape="oval">
+            <solid android:color="#FF4CAF50" />
+        </shape>
+    </item>
+    
+    <!-- 待機狀態 -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#FFFF9800" />
+        </shape>
+    </item>
+    
+</selector>
+

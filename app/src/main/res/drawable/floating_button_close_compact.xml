@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <!-- 按下狀態 -->
+    <item android:state_pressed="true">
+        <shape android:shape="oval">
+            <solid android:color="#80FF5722" />
+        </shape>
+    </item>
+    
+    <!-- 正常狀態 -->
+    <item>
+        <shape android:shape="oval">
+            <solid android:color="#60FF5722" />
+        </shape>
+    </item>
+    
+</selector>
+

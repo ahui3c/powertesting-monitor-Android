@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">测电力_监控</string>
+    
+    <!-- 主界面 -->
+    <string name="main_title">测电力_监控</string>
+    <string name="start_monitoring">开始监测</string>
+    <string name="stop_monitoring">停止监测</string>
+    <string name="settings">设置</string>
+    <string name="history">历史记录</string>
+    
+    <!-- 浮动窗口 -->
+    <string name="floating_window_title">电力监测</string>
+    <string name="status_idle">待机中</string>
+    <string name="status_running">测试中</string>
+    <string name="status_completed">已完成</string>
+    
+    <!-- 设置 -->
+    <string name="settings_title">设置</string>
+    <string name="test_duration">测试时间</string>
+    <string name="test_duration_summary">设置每次测试的持续时间</string>
+    <string name="floating_window_settings">浮动窗口设置</string>
+    <string name="enable_floating_window">启用浮动窗口</string>
+    <string name="window_transparency">窗口透明度</string>
+    
+    <!-- 历史记录 -->
+    <string name="history_title">测试历史</string>
+    <string name="no_history">暂无测试记录</string>
+    <string name="test_result_format">%1$s - %2$s\n持续时间：%3$s\n电量消耗：%4$d%%</string>
+    
+    <!-- 权限 -->
+    <string name="permission_overlay_title">浮动窗口权限</string>
+    <string name="permission_overlay_message">需要浮动窗口权限才能显示监测状态</string>
+    <string name="permission_battery_title">电池优化</string>
+    <string name="permission_battery_message">为确保监测准确性，建议关闭电池优化</string>
+    <string name="grant_permission">授予权限</string>
+    <string name="cancel">取消</string>
+    
+    <!-- 时间格式 -->
+    <string name="duration_format">%1$d分%2$d秒</string>
+    <string name="time_format">%1$02d:%2$02d</string>
+    
+    <!-- 通知 -->
+    <string name="notification_channel_name">电力监测</string>
+    <string name="notification_channel_desc">电力监测服务通知</string>
+    <string name="notification_title">电力监测中</string>
+    <string name="notification_content">点击查看详细信息</string>
+    
+    <!-- 主活动界面 -->
+    <string name="app_description">电力监控是一款专业的电池消耗测试工具，提供精确的电池使用量监测和分析功能。</string>
+    <string name="permission_status">权限状态</string>
+    <string name="floating_window_permission">浮动窗口权限</string>
+    <string name="permission_granted">已授予</string>
+    <string name="permission_not_granted">未授予</string>
+    <string name="request_permission">请求权限</string>
+    <string name="floating_monitoring">浮动监测</string>
+    <string name="floating_monitoring_desc">启动浮动窗口进行实时电池监测</string>
+    <string name="launch_floating_window">启动浮动窗口</string>
+    <string name="test_settings">测试设置</string>
+    <string name="test_settings_desc">配置测试时长和参数</string>
+    <string name="test_duration_minutes">测试时长（分钟）</string>
+    <string name="minutes_30">30分钟</string>
+    <string name="minutes_60">60分钟</string>
+    <string name="system_settings">系统设置</string>
+    <string name="system_settings_desc">配置系统相关设置以获得最佳性能</string>
+    <string name="battery_optimization">电池优化</string>
+    <string name="battery_optimization_desc">为确保监测准确性，请关闭电池优化</string>
+    <string name="open_battery_settings">打开电池设置</string>
+    <string name="data_management">数据管理</string>
+    <string name="data_management_desc">导出或清除测试数据</string>
+    <string name="export_data">导出数据</string>
+    <string name="clear_data">清除数据</string>
+    <string name="test_records">测试记录</string>
+    <string name="test_records_desc">查看过往的电池测试历史</string>
+    <string name="view_history">查看历史</string>
+    <string name="about_app">关于应用</string>
+    <string name="about_app_desc">查看应用信息和开发者联系方式</string>
+    <string name="view_details">查看详细信息</string>
+    
+    <!-- 关于对话框 -->
+    <string name="about_title">关于</string>
+    <string name="version_info">版本信息</string>
+    <string name="version_label">版本：</string>
+    <string name="version_code_label">版本代码：</string>
+    <string name="developer_info">开发者信息</string>
+    <string name="author_label">作者：</string>
+    <string name="author_name">廖阿辉</string>
+    <string name="email_label">邮箱：</string>
+    <string name="website_label">网站：</string>
+    <string name="app_intro">应用程序介绍</string>
+    <string name="app_description_full">电力监控是一款专业的电池消耗测试工具，提供精确的电池使用量监测和分析功能。</string>
+    <string name="main_features">主要功能：</string>
+    <string name="feature_list">• 浮动窗口实时监控\n• 自定义测试时长\n• 详细测试报告\n• 历史记录管理\n• 音效震动反馈</string>
+    <string name="contact_author">联络作者</string>
+    <string name="visit_website">访问网站</string>
+    <string name="close">关闭</string>
+    
+    <!-- 提示消息 -->
+    <string name="email_copied">作者邮箱已复制到剪贴板：%s</string>
+    <string name="website_copied">网站地址已复制到剪贴板：%s</string>
+    <string name="no_email_app">无法打开邮件应用程序，请手动联系：%s</string>
+    <string name="no_browser_app">无法打开浏览器，请手动访问：%s</string>
+    <string name="data_exported">测试数据导出成功</string>
+    <string name="data_cleared">测试数据清除成功</string>
+    <string name="export_failed">导出数据失败</string>
+    <string name="clear_failed">清除数据失败</string>
+    
+    <!-- 测试结果 -->
+    <string name="test_date">测试日期</string>
+    <string name="test_time">测试时间</string>
+    <string name="battery_change">电量变化</string>
+    <string name="consumption_rate">消耗率</string>
+    <string name="copy_result">复制</string>
+    <string name="result_copied">测试结果已复制到剪贴板</string>
+    
+    <!-- 统计信息 -->
+    <string name="statistics_summary">统计摘要</string>
+    <string name="total_tests">总测试次数</string>
+    <string name="average_consumption">平均消耗</string>
+    <string name="average_rate">平均消耗率</string>
+</resources>
