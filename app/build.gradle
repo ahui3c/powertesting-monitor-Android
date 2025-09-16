@@ -5,14 +5,14 @@ plugins {
 
 android {
     namespace 'com.batterymonitor.app'
-    compileSdk 35
+    compileSdk 34
 
     defaultConfig {
         applicationId "com.batterymonitor.newicon"
         minSdk 23
-        targetSdk 35
-        versionCode 1
-        versionName "0.1"
+        targetSdk 34
+        versionCode 7
+        versionName "0.7"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         

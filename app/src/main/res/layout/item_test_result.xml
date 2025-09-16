@@ -44,6 +44,18 @@
 
         </LinearLayout>
 
+        <!-- 測試主題 -->
+        <TextView
+            android:id="@+id/tv_test_subject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="影片播放測試"
+            android:textSize="13sp"
+            android:textColor="@color/primary_color"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"
+            android:visibility="visible" />
+
         <!-- 詳細信息 -->
         <LinearLayout
             android:layout_width="match_parent"

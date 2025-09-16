@@ -67,6 +67,15 @@
             android:exported="false"
             android:parentActivityName=".MainActivity"
             android:theme="@style/Theme.BatteryMonitorApp" />
+            
+        <!-- 校正亮度活動 -->
+        <activity
+            android:name=".BrightnessCalibrationActivity"
+            android:exported="false"
+            android:parentActivityName=".MainActivity"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:screenOrientation="portrait"
+            android:configChanges="orientation|screenSize|keyboardHidden" />
         
         <!-- 浮動窗口服務 -->
         <service

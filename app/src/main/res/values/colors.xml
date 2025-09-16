@@ -61,5 +61,13 @@
     <color name="primary_text">#212121</color>
     <color name="secondary_text">#757575</color>
     
+    <!-- 輸入區顏色 -->
+    <color name="input_background_light_yellow">#FFFEF7E0</color>
+    <color name="input_text_dark">#FF333333</color>
+    
+    <!-- 校正亮度頁面顏色 -->
+    <color name="calibration_white">#FFFFFFFF</color>
+    <color name="calibration_text">#FF666666</color>
+    
 </resources>
 

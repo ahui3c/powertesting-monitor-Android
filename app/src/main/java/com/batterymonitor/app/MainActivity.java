@@ -1,10 +1,12 @@
 package com.batterymonitor.app;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.SeekBar;
@@ -40,6 +42,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnBatteryOptimization;
     private Button btnExportData;
     private Button btnClearData;
+    private Button btnBrightnessCalibration;
     private Button btnAbout;
     
     private BatteryMonitor batteryMonitor;
@@ -74,6 +77,7 @@ public class MainActivity extends AppCompatActivity {
         btnBatteryOptimization = findViewById(R.id.btn_battery_optimization);
         btnExportData = findViewById(R.id.btn_export_data);
         btnClearData = findViewById(R.id.btn_clear_data);
+        btnBrightnessCalibration = findViewById(R.id.btn_brightness_calibration);
         btnAbout = findViewById(R.id.btn_about);
     }
     
@@ -110,6 +114,8 @@ public class MainActivity extends AppCompatActivity {
             public void onStopTrackingTouch(SeekBar seekBar) {}
         });
         
+
+        
         // 快速選擇30分鐘
         btnDuration30.setOnClickListener(v -> {
             seekbarTestDuration.setProgress(30);
@@ -133,6 +139,9 @@ public class MainActivity extends AppCompatActivity {
         // 清除數據
         btnClearData.setOnClickListener(v -> showClearDataDialog());
         
+        // 校正亮度
+        btnBrightnessCalibration.setOnClickListener(v -> openBrightnessCalibration());
+        
         // 關於資訊
         btnAbout.setOnClickListener(v -> showAboutDialog());
     }
@@ -146,6 +155,7 @@ public class MainActivity extends AppCompatActivity {
             int startBattery = intent.getIntExtra("test_start_battery", 0);
             int endBattery = intent.getIntExtra("test_end_battery", 0);
             long duration = intent.getLongExtra("test_duration", 0);
+            String testSubject = intent.getStringExtra("test_subject");
             
             if (startTime > 0 && endTime > 0) {
                 // 創建TestResult對象
@@ -155,6 +165,7 @@ public class MainActivity extends AppCompatActivity {
                 result.setStartBatteryLevel(startBattery);
                 result.setEndBatteryLevel(endBattery);
                 result.setDuration(duration);
+                result.setTestSubject(testSubject);
                 
                 // 顯示測試結果對話框
                 TestResultDialog dialog = new TestResultDialog(this, result);
@@ -215,6 +226,8 @@ public class MainActivity extends AppCompatActivity {
         seekbarTestDuration.setMax(120); // 最大120分鐘
         seekbarTestDuration.setProgress(Math.max(1, Math.min(120, durationMinutes)));
         updateDurationText(durationMinutes);
+        
+
     }
     
     private void updateDurationText(int minutes) {
@@ -286,11 +299,22 @@ public class MainActivity extends AppCompatActivity {
         }
     }
     
+    private void openBrightnessCalibration() {
+        try {
+            Intent intent = new Intent(this, BrightnessCalibrationActivity.class);
+            startActivity(intent);
+        } catch (Exception e) {
+            Log.e("MainActivity", "Error opening brightness calibration", e);
+            Toast.makeText(this, "無法開啟校正亮度功能", Toast.LENGTH_SHORT).show();
+        }
+    }
+    
     private void showAboutDialog() {
         try {
-            AboutDialog aboutDialog = new AboutDialog(this);
-            aboutDialog.showAbout();
+            AboutDialog dialog = new AboutDialog(this);
+            dialog.show();
         } catch (Exception e) {
+            Log.e("MainActivity", "Error showing about dialog", e);
             Toast.makeText(this, "無法顯示關於資訊", Toast.LENGTH_SHORT).show();
         }
     }

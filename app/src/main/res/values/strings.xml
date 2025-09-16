@@ -118,5 +118,23 @@
     <string name="total_tests">總測試次數</string>
     <string name="average_consumption">平均消耗</string>
     <string name="average_rate">平均消耗率</string>
+    
+    <!-- 測試主題對話框 -->
+    <string name="select_test_subject">選擇測試項目</string>
+    <string name="test_subject_hint">輸入測試項目（如：影片播放）</string>
+    <string name="quick_select">快速選擇：</string>
+    <string name="recording">錄影</string>
+    <string name="video">影片</string>
+    <string name="gaming">遊戲</string>
+    <string name="start_test">開始測試</string>
+    <string name="test_subject">測試項目</string>
+    
+    <!-- 校正亮度功能 -->
+    <string name="brightness_calibration">校正亮度</string>
+    <string name="brightness_calibration_title">亮度校正工具</string>
+    <string name="brightness_calibration_instruction">此頁面提供純白色畫面，適用於使用亮度計進行螢幕亮度測量和校正。</string>
+    <string name="brightness_calibration_usage">使用方法：將亮度計放置在螢幕上進行測量，點擊「隱藏說明」可獲得完整的白色畫面。</string>
+    <string name="hide_instruction">隱藏說明</string>
+    <string name="close_calibration">關閉校正</string>
+    <string name="tap_to_show_controls">點擊螢幕顯示控制項</string>
 </resources>
-

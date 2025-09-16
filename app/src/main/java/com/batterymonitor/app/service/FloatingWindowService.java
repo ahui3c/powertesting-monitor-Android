@@ -22,6 +22,7 @@ import android.widget.Toast;
 import com.batterymonitor.app.MainActivity;
 import com.batterymonitor.app.R;
 import com.batterymonitor.app.dialog.TestResultDialog;
+import com.batterymonitor.app.dialog.TestSubjectDialog;
 import com.batterymonitor.app.manager.BatteryMonitor;
 import com.batterymonitor.app.manager.FeedbackManager;
 import com.batterymonitor.app.manager.WakeLockManager;
@@ -55,6 +56,8 @@ public class FloatingWindowService extends Service {
     private int startBatteryLevel = 100;
     private long startTime = 0;
     private int testDurationMinutes = 30; // 預設30分鐘
+    private String currentTestSubject = ""; // 當前測試主題
+    private TestSubjectDialog testSubjectDialog;
     
     // UI更新處理器
     private Handler updateHandler;
@@ -231,58 +234,103 @@ public class FloatingWindowService extends Service {
     
     private void toggleTest() {
         try {
-            isTestRunning = !isTestRunning;
-            
-            if (isTestRunning) {
-                // 開始測試
-                startBatteryLevel = batteryMonitor.getCurrentBatteryLevel();
-                startTime = System.currentTimeMillis();
-                
-                // 重新讀取測試時長設定
-                testDurationMinutes = preferenceManager.getTestDuration();
-                
-                // 獲取WakeLock防止休眠和變暗
-                wakeLockManager.acquireWakeLock();
-                
-                // 播放開始反饋（音效 + 震動）
-                if (feedbackManager != null) {
-                    feedbackManager.playStartFeedback();
-                }
-                
-                Toast.makeText(this, "開始監測 " + testDurationMinutes + " 分鐘 - 螢幕保持明亮", Toast.LENGTH_SHORT).show();
-                Log.d(TAG, "Test started at battery level: " + startBatteryLevel + "%, duration: " + testDurationMinutes + " minutes");
-                
+            if (!isTestRunning) {
+                // 顯示測試主題選擇對話框
+                showTestSubjectDialog();
             } else {
                 // 停止測試
-                wakeLockManager.releaseWakeLock();
-                
-                // 播放結束反饋（音效 + 震動）
-                if (feedbackManager != null) {
-                    feedbackManager.playEndFeedback();
-                }
-                
-                // 計算測試結果
-                int endBatteryLevel = batteryMonitor.getCurrentBatteryLevel();
-                long duration = System.currentTimeMillis() - startTime;
-                int batteryConsumed = Math.max(0, startBatteryLevel - endBatteryLevel);
-                
-                // 創建測試結果
-                TestResult result = createTestResult(startTime, duration, startBatteryLevel, endBatteryLevel, batteryConsumed);
-                
-                // 保存到歷史記錄
-                preferenceManager.saveTestResult(result);
-                
-                // 顯示詳細結果
-                showTestResult(result);
-                
-                Log.d(TAG, "Test completed and saved: " + result.toString());
+                stopTest();
             }
+        } catch (Exception e) {
+            Log.e(TAG, "Error stopping test", e);
+            Toast.makeText(this, "停止測試失敗: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+    }
+    
+    private void showTestSubjectDialog() {
+        if (testSubjectDialog == null) {
+            testSubjectDialog = new TestSubjectDialog(this);
+        }
+        
+        testSubjectDialog.show(new TestSubjectDialog.OnTestSubjectSelectedListener() {
+            @Override
+            public void onTestSubjectSelected(String testSubject) {
+                currentTestSubject = testSubject;
+                startTest();
+            }
+            
+            @Override
+            public void onCancelled() {
+                // 用戶取消，不執行任何操作
+                Log.d(TAG, "Test subject selection cancelled");
+            }
+        });
+    }
+    
+    private void startTest() {
+        try {
+            isTestRunning = true;
+            
+            // 開始測試
+            startBatteryLevel = batteryMonitor.getCurrentBatteryLevel();
+            startTime = System.currentTimeMillis();
+            
+            // 重新讀取測試時長設定
+            testDurationMinutes = preferenceManager.getTestDuration();
+                
+            // 獲取WakeLock防止休眠和變暗
+            wakeLockManager.acquireWakeLock();
+            
+            // 播放開始反饋（音效 + 震動）
+            if (feedbackManager != null) {
+                feedbackManager.playStartFeedback();
+            }
+            
+            String subjectText = currentTestSubject.isEmpty() ? "" : " - " + currentTestSubject;
+            Toast.makeText(this, "開始監測 " + testDurationMinutes + " 分鐘" + subjectText, Toast.LENGTH_SHORT).show();
+            Log.d(TAG, "Test started at battery level: " + startBatteryLevel + "%, duration: " + testDurationMinutes + " minutes, subject: " + currentTestSubject);
             
             updateUI();
             
         } catch (Exception e) {
-            Log.e(TAG, "Error toggling test", e);
-            Toast.makeText(this, "操作失敗: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+            Log.e(TAG, "Error starting test", e);
+            Toast.makeText(this, "開始測試失敗: " + e.getMessage(), Toast.LENGTH_SHORT).show();
+        }
+    }
+    
+    private void stopTest() {
+        try {
+            isTestRunning = false;
+            
+            // 停止測試
+            wakeLockManager.releaseWakeLock();
+            
+            // 播放結束反饋（音效 + 震動）
+            if (feedbackManager != null) {
+                feedbackManager.playEndFeedback();
+            }
+            
+            // 計算測試結果
+            int endBatteryLevel = batteryMonitor.getCurrentBatteryLevel();
+            long duration = System.currentTimeMillis() - startTime;
+            int batteryConsumed = Math.max(0, startBatteryLevel - endBatteryLevel);
+            
+            // 創建測試結果
+            TestResult result = createTestResult(startTime, duration, startBatteryLevel, endBatteryLevel, batteryConsumed);
+            
+            // 保存到歷史記錄
+            preferenceManager.saveTestResult(result);
+            
+            // 顯示詳細結果
+            showTestResult(result);
+            
+            Log.d(TAG, "Test completed and saved: " + result.toString());
+            
+            updateUI();
+            
+        } catch (Exception e) {
+            Log.e(TAG, "Error stopping test", e);
+            Toast.makeText(this, "停止測試失敗: " + e.getMessage(), Toast.LENGTH_SHORT).show();
         }
     }
     
@@ -295,15 +343,13 @@ public class FloatingWindowService extends Service {
         result.setEndBatteryLevel(endBattery);
         result.setBatteryConsumed(consumed);
         result.setPlannedDuration(testDurationMinutes * 60 * 1000L); // 轉換為毫秒
+        result.setTestSubject(currentTestSubject); // 設定測試主題
         return result;
     }
     
     private void showTestResult(TestResult result) {
         try {
-            // 保存結果到SharedPreferences供Activity讀取
-            preferenceManager.saveTestResult(result);
-            
-            // 啟動MainActivity並顯示結果
+            // 啟動MainActivity並顯示結果（不需要重複保存，已在stopTest中保存）
             Intent intent = new Intent(this, MainActivity.class);
             intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TOP);
             intent.putExtra("show_test_result", true);
@@ -312,6 +358,7 @@ public class FloatingWindowService extends Service {
             intent.putExtra("test_start_battery", result.getStartBatteryLevel());
             intent.putExtra("test_end_battery", result.getEndBatteryLevel());
             intent.putExtra("test_duration", result.getDuration());
+            intent.putExtra("test_subject", result.getTestSubject());
             startActivity(intent);
             
             Log.d(TAG, "Test result activity started: " + result.toString());
@@ -447,6 +494,11 @@ public class FloatingWindowService extends Service {
             // 釋放FeedbackManager資源
             if (feedbackManager != null) {
                 feedbackManager.release();
+            }
+            
+            // 關閉測試主題對話框
+            if (testSubjectDialog != null && testSubjectDialog.isShowing()) {
+                testSubjectDialog.dismiss();
             }
             
             // 移除浮動窗口

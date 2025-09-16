@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="@drawable/dialog_background">
+
+    <!-- 標題 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_test_subject"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:gravity="center"
+        android:layout_marginBottom="20dp" />
+
+    <!-- 測試主題輸入 -->
+    <EditText
+        android:id="@+id/et_test_subject"
+        android:layout_width="match_parent"
+        android:layout_height="52dp"
+        android:hint="@string/test_subject_hint"
+        android:textSize="15sp"
+        android:textColor="@color/input_text_dark"
+        android:textColorHint="@color/text_secondary"
+        android:background="@drawable/input_background_light_yellow"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="14dp"
+        android:layout_marginBottom="16dp"
+        android:maxLines="1"
+        android:imeOptions="actionDone"
+        android:elevation="1dp" />
+
+    <!-- 快速選擇按鈕 -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/quick_select"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/text_primary"
+        android:layout_marginBottom="12dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="20dp">
+
+        <Button
+            android:id="@+id/btn_recording"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="@string/recording"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/floating_button_primary"
+            android:layout_marginEnd="8dp"
+            android:elevation="2dp" />
+
+        <Button
+            android:id="@+id/btn_video"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="@string/video"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/floating_button_primary"
+            android:layout_marginEnd="8dp"
+            android:elevation="2dp" />
+
+        <Button
+            android:id="@+id/btn_gaming"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:text="@string/gaming"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/floating_button_primary"
+            android:elevation="2dp" />
+
+    </LinearLayout>
+
+    <!-- 操作按鈕 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:text="@string/cancel"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/text_primary"
+            android:background="@drawable/floating_button_secondary"
+            android:layout_marginEnd="12dp"
+            android:elevation="2dp" />
+
+        <Button
+            android:id="@+id/btn_start_test"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:text="@string/start_test"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:background="@drawable/floating_button_primary"
+            android:elevation="2dp" />
+
+    </LinearLayout>
+
+</LinearLayout>

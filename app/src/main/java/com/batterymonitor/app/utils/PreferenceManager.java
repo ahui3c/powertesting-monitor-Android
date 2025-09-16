@@ -16,6 +16,7 @@ public class PreferenceManager {
     
     // 設定鍵值
     private static final String KEY_TEST_DURATION = "test_duration";
+    private static final String KEY_TEST_SUBJECT = "test_subject";
     private static final String KEY_AUTO_START = "auto_start";
     private static final String KEY_FLOATING_WINDOW_ENABLED = "floating_window_enabled";
     private static final String KEY_WINDOW_TRANSPARENCY = "window_transparency";
@@ -46,6 +47,16 @@ public class PreferenceManager {
     public void setTestDuration(int durationMinutes) {
         preferences.edit().putInt(KEY_TEST_DURATION, durationMinutes).apply();
         Log.d(TAG, "Test duration set to: " + durationMinutes + " minutes");
+    }
+    
+    // 測試主題設定
+    public String getTestSubject() {
+        return preferences.getString(KEY_TEST_SUBJECT, "");
+    }
+    
+    public void setTestSubject(String subject) {
+        preferences.edit().putString(KEY_TEST_SUBJECT, subject != null ? subject : "").apply();
+        Log.d(TAG, "Test subject set to: " + subject);
     }
     
     // 自動啟動設定
@@ -119,7 +130,8 @@ public class PreferenceManager {
                   .append(r.getStartBatteryLevel()).append(",")
                   .append(r.getEndBatteryLevel()).append(",")
                   .append(r.getBatteryConsumed()).append(",")
-                  .append(r.getDuration());
+                  .append(r.getDuration()).append(",")
+                  .append(encodeTestSubject(r.getTestSubject()));
             }
             
             preferences.edit().putString(KEY_TEST_HISTORY, sb.toString()).apply();
@@ -149,6 +161,13 @@ public class PreferenceManager {
                         result.setBatteryConsumed(Integer.parseInt(parts[4]));
                         result.setDuration(Long.parseLong(parts[5]));
                         
+                        // 處理測試主題（如果存在）
+                        if (parts.length >= 7) {
+                            result.setTestSubject(decodeTestSubject(parts[6]));
+                        } else {
+                            result.setTestSubject("");
+                        }
+                        
                         history.add(result);
                     }
                 }
@@ -163,6 +182,23 @@ public class PreferenceManager {
     public void clearTestHistory() {
         preferences.edit().remove(KEY_TEST_HISTORY).apply();
         Log.d(TAG, "Test history cleared");
+    }
+    
+    // 測試主題編碼和解碼方法（處理逗號和分隔符）
+    private String encodeTestSubject(String subject) {
+        if (subject == null || subject.isEmpty()) {
+            return "EMPTY";
+        }
+        // 將逗號和豎線替換為安全字符
+        return subject.replace(",", "COMMA").replace("|", "PIPE");
+    }
+    
+    private String decodeTestSubject(String encoded) {
+        if (encoded == null || encoded.equals("EMPTY")) {
+            return "";
+        }
+        // 將安全字符還原為原始字符
+        return encoded.replace("COMMA", ",").replace("PIPE", "|");
     }
     
     // 統計信息

@@ -70,6 +70,34 @@
             android:textStyle="bold" />
     </LinearLayout>
 
+    <!-- 測試主題 -->
+    <LinearLayout
+        android:id="@+id/layout_test_subject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="8dp"
+        android:visibility="visible">
+        
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="🎯 項目:"
+            android:textSize="14sp"
+            android:textColor="@color/secondary_text" />
+        
+        <TextView
+            android:id="@+id/tv_test_subject"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="影片播放"
+            android:textSize="14sp"
+            android:textColor="@color/primary_color"
+            android:textStyle="bold" />
+    </LinearLayout>
+
     <!-- 持續時間 -->
     <LinearLayout
         android:layout_width="match_parent"

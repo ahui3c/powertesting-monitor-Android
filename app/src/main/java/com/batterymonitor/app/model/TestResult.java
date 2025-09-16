@@ -16,6 +16,7 @@ public class TestResult {
     private int endBatteryLevel;    // 結束電量百分比
     private long plannedDuration;   // 計劃測試時長（毫秒）
     private long actualDuration;    // 實際測試時長（毫秒）
+    private String testSubject;     // 測試項目主題
     
     // 構造函數
     public TestResult() {
@@ -29,6 +30,18 @@ public class TestResult {
         this.endBatteryLevel = endBatteryLevel;
         this.plannedDuration = plannedDuration;
         this.actualDuration = actualDuration;
+        this.testSubject = "";
+    }
+    
+    public TestResult(long startTime, long endTime, int startBatteryLevel, 
+                     int endBatteryLevel, long plannedDuration, long actualDuration, String testSubject) {
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.startBatteryLevel = startBatteryLevel;
+        this.endBatteryLevel = endBatteryLevel;
+        this.plannedDuration = plannedDuration;
+        this.actualDuration = actualDuration;
+        this.testSubject = testSubject != null ? testSubject : "";
     }
     
     // Getter和Setter方法
@@ -78,6 +91,14 @@ public class TestResult {
     
     public void setActualDuration(long actualDuration) {
         this.actualDuration = actualDuration;
+    }
+    
+    public String getTestSubject() {
+        return testSubject != null ? testSubject : "";
+    }
+    
+    public void setTestSubject(String testSubject) {
+        this.testSubject = testSubject != null ? testSubject : "";
     }
     
     // 兼容性方法

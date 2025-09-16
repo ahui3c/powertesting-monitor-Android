@@ -80,6 +80,7 @@ public class TestResultAdapter extends RecyclerView.Adapter<TestResultAdapter.Vi
     
     static class ViewHolder extends RecyclerView.ViewHolder {
         private TextView tvTestDate;
+        private TextView tvTestSubject;
         private TextView tvBatteryConsumed;
         private TextView tvDuration;
         private TextView tvBatteryRange;
@@ -91,6 +92,7 @@ public class TestResultAdapter extends RecyclerView.Adapter<TestResultAdapter.Vi
             super(itemView);
             
             tvTestDate = itemView.findViewById(R.id.tv_test_date);
+            tvTestSubject = itemView.findViewById(R.id.tv_test_subject);
             tvBatteryConsumed = itemView.findViewById(R.id.tv_battery_consumed);
             tvDuration = itemView.findViewById(R.id.tv_duration);
             tvBatteryRange = itemView.findViewById(R.id.tv_battery_range);
@@ -102,6 +104,15 @@ public class TestResultAdapter extends RecyclerView.Adapter<TestResultAdapter.Vi
         public void bind(TestResult result) {
             // 設置測試日期
             tvTestDate.setText(result.getFormattedStartTime().substring(0, 10)); // 只顯示日期部分
+            
+            // 設置測試主題
+            String testSubject = result.getTestSubject();
+            if (testSubject != null && !testSubject.trim().isEmpty()) {
+                tvTestSubject.setText(testSubject);
+                tvTestSubject.setVisibility(View.VISIBLE);
+            } else {
+                tvTestSubject.setVisibility(View.GONE);
+            }
             
             // 設置電量消耗
             tvBatteryConsumed.setText("-" + result.getBatteryConsumed() + "%");

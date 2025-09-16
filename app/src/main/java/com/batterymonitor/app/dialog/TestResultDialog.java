@@ -5,6 +5,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Button;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.batterymonitor.app.R;
@@ -64,6 +65,8 @@ public class TestResultDialog {
         TextView tvTitle = dialogView.findViewById(R.id.tv_dialog_title);
         TextView tvDeviceInfo = dialogView.findViewById(R.id.tv_device_info);
         TextView tvTimeRange = dialogView.findViewById(R.id.tv_time_range);
+        TextView tvTestSubject = dialogView.findViewById(R.id.tv_test_subject);
+        LinearLayout layoutTestSubject = dialogView.findViewById(R.id.layout_test_subject);
         TextView tvDuration = dialogView.findViewById(R.id.tv_duration);
         TextView tvBatteryChange = dialogView.findViewById(R.id.tv_battery_change);
         TextView tvConsumption = dialogView.findViewById(R.id.tv_consumption);
@@ -80,6 +83,15 @@ public class TestResultDialog {
         String startTime = timeFormat.format(new Date(testResult.getStartTime()));
         String endTime = timeFormat.format(new Date(testResult.getEndTime()));
         tvTimeRange.setText(startTime + " - " + endTime);
+        
+        // 設置測試主題
+        String testSubject = testResult.getTestSubject();
+        if (testSubject != null && !testSubject.trim().isEmpty()) {
+            tvTestSubject.setText(testSubject);
+            layoutTestSubject.setVisibility(View.VISIBLE);
+        } else {
+            layoutTestSubject.setVisibility(View.GONE);
+        }
         
         // 設置持續時間
         long durationMinutes = testResult.getDuration() / (60 * 1000);
