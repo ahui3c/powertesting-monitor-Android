@@ -74,25 +74,19 @@ public class BrightnessCalibrationActivity extends Activity {
         // 隱藏說明按鈕
         btnHideInstruction.setOnClickListener(v -> hideInstruction());
         
-        // 關閉校正按鈕
+        // 關閉校正按鈕 - 唯一的退出方式
         btnCloseCalibration.setOnClickListener(v -> finish());
         
-        // 點擊螢幕顯示控制項
-        findViewById(android.R.id.content).setOnClickListener(v -> {
-            if (!isInstructionVisible) {
-                showInstruction();
-            }
-        });
-        
-        // 點擊提示文字顯示控制項
-        tvTapHint.setOnClickListener(v -> showInstruction());
+        // 移除點擊空白畫面的退出功能，只能通過關閉按鈕退出
+        // 不再設置螢幕點擊監聽器
     }
     
     private void hideInstruction() {
         try {
             llInstruction.setVisibility(View.GONE);
             llBottomButtons.setVisibility(View.GONE);
-            tvTapHint.setVisibility(View.VISIBLE);
+            // 不顯示點擊提示，因為不再支援點擊恢復
+            tvTapHint.setVisibility(View.GONE);
             isInstructionVisible = false;
             
             // 重新設置全螢幕模式
@@ -100,24 +94,13 @@ public class BrightnessCalibrationActivity extends Activity {
         } catch (Exception e) {
             // 如果出現錯誤，至少隱藏主要元素
             llInstruction.setVisibility(View.GONE);
-            tvTapHint.setVisibility(View.VISIBLE);
+            tvTapHint.setVisibility(View.GONE);
             isInstructionVisible = false;
         }
     }
     
-    private void showInstruction() {
-        try {
-            llInstruction.setVisibility(View.VISIBLE);
-            llBottomButtons.setVisibility(View.VISIBLE);
-            tvTapHint.setVisibility(View.GONE);
-            isInstructionVisible = true;
-        } catch (Exception e) {
-            // 如果出現錯誤，至少顯示主要元素
-            llInstruction.setVisibility(View.VISIBLE);
-            tvTapHint.setVisibility(View.GONE);
-            isInstructionVisible = true;
-        }
-    }
+    // 移除showInstruction方法，因為不再支援點擊恢復控制項
+    // 用戶只能通過關閉按鈕退出校正模式
     
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {

@@ -11,8 +11,8 @@ android {
         applicationId "com.batterymonitor.newicon"
         minSdk 23
         targetSdk 34
-        versionCode 7
-        versionName "0.7"
+        versionCode 8
+        versionName "0.8"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         
@@ -27,6 +27,14 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            // 使用調試簽名確保可安裝
+            signingConfig signingConfigs.debug
+            // 保留資源文件
+            shrinkResources false
+        }
+        debug {
+            minifyEnabled false
+            debuggable true
         }
     }
     compileOptions {
