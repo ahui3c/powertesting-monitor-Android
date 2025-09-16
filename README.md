@@ -7,9 +7,9 @@
 **專業的Android電池消耗監控工具**  
 **Professional Battery Consumption Monitoring Tool for Android**
 
-[![Version](https://img.shields.io/badge/version-0.1-blue.svg)](https://github.com/ahui3c/powertesting-monitor-Android/releases)
+[![Version](https://img.shields.io/badge/version-0.7-blue.svg)](https://github.com/ahui3c/powertesting-monitor-Android/releases)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Android](https://img.shields.io/badge/platform-Android%206.0%2B-brightgreen.svg)](https://android.com)
+[![Android](https://img.shields.io/badge/platform-Android%208.0%2B-brightgreen.svg)](https://android.com)
 [![Language](https://img.shields.io/badge/language-Java-orange.svg)](https://www.java.com)
 
 [繁體中文](#繁體中文) | [English](#english)
@@ -55,8 +55,15 @@
 
 #### 🎯 **智能測試管理**
 - **彈性時長**: 可自訂1到120分鐘的測試時間
-- **快速選擇**: 一鍵30分鐘和60分鐘預設按鈕
+- **測試主題**: 清晰可見的測試項目輸入功能（v0.7修復）
+- **快速選擇**: 錄影、影片、遊戲等常用測試項目快速選擇
 - **自動設定**: 自動測試配置和電池優化指導
+
+#### 🔆 **專業亮度校正工具** *(v0.7新增)*
+- **純白畫面**: 標準RGB(255,255,255)白色背景供光度計使用
+- **全螢幕模式**: 自動隱藏狀態欄和導航欄
+- **智能控制**: 可隱藏/顯示操作界面
+- **專業測量**: 相容各種亮度測量設備
 
 #### 🎵 **多感官反饋**
 - **音效提示**: 測試開始和完成的確認音效
@@ -70,7 +77,7 @@
 - **自動偵測**: 根據系統設定自動切換語言
 
 #### 📊 **全面數據管理**
-- **測試歷史**: 完整記錄所有電池測試的詳細資訊
+- **測試歷史**: 完整記錄所有電池測試的詳細資訊，包含測試主題
 - **數據導出**: 導出測試結果進行進一步分析
 - **一鍵複製**: 複製個別測試結果到剪貼簿
 - **數據清理**: 簡易的數據管理和清理選項
@@ -79,11 +86,12 @@
 - **權限管理**: 智能權限檢查和指導
 - **電池優化**: 直接存取系統電池優化設定
 - **設備相容**: 完美相容各種Android設備和螢幕尺寸
+- **穩定性**: v0.7版本修復所有已知崩潰問題
 
 ### 🚀 開始使用
 
 #### 系統需求
-- **Android版本**: 6.0+ (API 23)
+- **Android版本**: 8.0+ (API 26)
 - **記憶體**: 100MB+可用記憶體
 - **儲存空間**: 50MB+可用儲存空間
 - **權限**: 浮動視窗需要覆蓋權限
@@ -182,8 +190,15 @@ PowerTesting Monitor was born to solve these pain points as a professional tool:
 
 #### 🎯 **Intelligent Test Management**
 - **Flexible Duration**: Customizable test duration from 1 to 120 minutes
-- **Quick Selection**: One-tap 30-minute and 60-minute preset buttons
+- **Test Subject Input**: Clear and visible test subject input functionality (v0.7 fixed)
+- **Quick Selection**: Fast selection for common test types like Recording, Video, Gaming
 - **Auto Settings**: Automatic test configuration and battery optimization guidance
+
+#### 🔆 **Professional Brightness Calibration Tool** *(v0.7 New)*
+- **Pure White Screen**: Standard RGB(255,255,255) white background for light meters
+- **Full Screen Mode**: Auto-hide status bar and navigation bar
+- **Smart Controls**: Hide/show operation interface as needed
+- **Professional Measurement**: Compatible with various brightness measurement devices
 
 #### 🎵 **Multi-sensory Feedback**
 - **Audio Alerts**: Confirmation sounds for test start and completion
@@ -197,7 +212,7 @@ PowerTesting Monitor was born to solve these pain points as a professional tool:
 - **Auto Detection**: Automatic language switching based on system settings
 
 #### 📊 **Comprehensive Data Management**
-- **Test History**: Complete record of all battery tests with detailed information
+- **Test History**: Complete record of all battery tests with detailed information including test subjects
 - **Data Export**: Export test results for further analysis
 - **One-click Copy**: Copy individual test results to clipboard
 - **Data Cleanup**: Easy data management and cleanup options
@@ -206,11 +221,12 @@ PowerTesting Monitor was born to solve these pain points as a professional tool:
 - **Permission Management**: Smart permission checking and guidance
 - **Battery Optimization**: Direct access to system battery optimization settings
 - **Device Compatibility**: Perfect compatibility with various Android devices and screen sizes
+- **Stability**: v0.7 fixes all known crash issues
 
 ### 🚀 Getting Started
 
 #### System Requirements
-- **Android Version**: 6.0+ (API 23)
+- **Android Version**: 8.0+ (API 26)
 - **RAM**: 100MB+ available memory
 - **Storage**: 50MB+ available storage
 - **Permissions**: Overlay permission for floating window
@@ -274,8 +290,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 <div align="center">
 
-**電力監控 v0.1 - 讓專業電池監控變得簡單**  
-**PowerTesting Monitor v0.1 - Professional Battery Monitoring Made Simple**
+**電力監控 v0.7 - 讓專業電池監控變得簡單**  
+**PowerTesting Monitor v0.7 - Professional Battery Monitoring Made Simple**
 
 *Made with ❤️ by 廖阿輝 (Liao A-Hui)*
 
